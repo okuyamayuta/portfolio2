@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>cafe Lumière</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-container">
+      <h1 class="logo">cafe Lumière</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#access">Access</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="images/logo.png" alt="cafe Lumière">
+      <div class="hero-text">
+        <h2>A moment of peace in your busy day.</h2>
+      </div>
+      <div class="scroll-indicator">
+        <span>scroll</span>
+        <span class="arrow">↓</span>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    
+  </section>
+
+  <!-- コンセプト -->
+  <section id="concept" class="section fadein">
+    <div class="container">
+      <h3 class="section-title">Concept</h3>
+      <div class="section-text concept-text">
+        <p>cafe Lumière は、陽だまりのような静けさに包まれたカフェです。</p>
+
+        <p>
+          忙しい日々の中で、ふと深呼吸したくなるような、<br>
+          そんなひとときがここには流れています。
+        </p>
+
+        <p>
+          香り高いコーヒーと季節の甘味、やわらかな音楽と光。<br>
+          五感をととのえるように、心ほどける時間をお過ごしください。
+        </p>
+
+        <p>
+          当店は静かな空間づくりのため、席数を限らせていただいております。<br>
+          ご来店の際は、事前のご予約をおすすめしております。
+        </p>
+
+        <p>
+          皆さまとの出会いを、心より楽しみにお待ちしております。
+        </p>
+
+        <p>cafe Lumière</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section fadein">
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/gallery1.jpg" alt="1" /></div>
+        <div class="swiper-slide"><img src="images/gallery2.jpg" alt="2" /></div>
+        <div class="swiper-slide"><img src="images/gallery3.jpg" alt="3" /></div>
+        <div class="swiper-slide"><img src="images/gallery4.jpg" alt="4" /></div>
+      </div>
+
+      <!-- ナビボタン -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- メニュー -->
+  <section id="menu" class="section fadein">
+    <div class="container">
+      <h3 class="section-title">Menu</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/menu1.jpg" alt="ブレンドコーヒー">
+          <h4>ブレンドコーヒー</h4>
+          <p>¥500</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/menu2.jpg" alt="季節のケーキ">
+          <h4>季節のケーキ</h4>
+          <p>¥650</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/menu3.jpg" alt="自家製レモネード">
+          <h4>自家製レモネード</h4>
+          <p>¥550</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/menu4.jpg" alt="カフェラテ">
+          <h4>カフェラテ</h4>
+          <p>¥600</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visual-section">
+    <div class="visual-overlay">
+      <!-- テキスト入れたい場合はこちらに入れる -->
+      <!-- <h2 class="visual-catch">Take a breath, feel the light.</h2> -->
+    </div>
+  </section>
+
+  <section id="access" class="section fadein">
+    <div class="container">
+      <h3 class="section-title">Access</h3>
+      <p class="section-text">
+        〒123-4567 東京都渋谷区カフェ通り1-2-3<br>
+        営業時間：10:00～19:00（月曜定休）<br>
+        <span class="map-note">※ポートフォリオ用の架空店舗のため、地図は仮の位置を表示しています。</span>
+      </p>
+
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.885080607162!2d139.69967440100183!3d35.658033952535824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1752310933540!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="visual-section2">
+    <div class="visual-overlay2">
+      <!-- テキスト入れたい場合はこちらに入れる -->
+      <!-- <h2 class="visual-catch">Take a breath, feel the light.</h2> -->
+    </div>
+  </section>
+
+  <section id="contact" class="section fadein">
+    <div class="container">
+      <h3 class="section-title">Contact</h3>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('送信されました（ダミー）');">
+        <div class="form-group">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="contact-button">送信</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 cafe Lumière</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

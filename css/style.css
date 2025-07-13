@@ -1,0 +1,459 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ヘッダー */
+.site-header {
+  position: fixed; /* ← sticky → fixed に変更 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  z-index: 100;
+  font-family: "Alegreya", serif;
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* visibilityも追加 */
+  opacity: 1;
+  visibility: visible;
+}
+
+.site-header.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Alegreya", serif;
+}
+
+.nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+/* ヒーロー */
+.hero {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* ← ココがポイント */
+  height: 800px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-text h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: "Alegreya", serif;
+}
+
+.scroll-indicator {
+  margin-top: 100px;
+  font-family: "Alegreya", serif;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+.scroll-indicator .arrow {
+  display: block;
+  font-size: 50px;
+  margin-top: 5px;
+  animation: bounce 1.5s infinite;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  width: 220px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* セクション共通 */
+.section {
+  padding-bottom: 30px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+}
+
+.section-text,
+.menu-list {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* 黒の半透明レイヤーで文字が見やすく */
+}
+
+.hero-text {
+  margin-top: 100px;
+  position: relative;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-logo img {
+  width: 300px;
+}
+
+.concept-text {
+  text-align: center;
+}
+
+.concept-text p {
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fadein.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.menu-card {
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.menu-card h4 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.menu-card p {
+  font-size: 18px;
+  color: #666;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Noto Serif JP', serif;
+  background-color: #fafafa;
+}
+
+.contact-button {
+  align-self: flex-start;
+  background-color: #333;
+  color: white;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #555;
+}
+
+.visual-section {
+  margin: 50px 0;
+  background-image: url('../images/visual2.jpg'); /* 好きな画像に変更 */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35); /* 少し暗くして背景見やすく */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-section2 {
+  margin: 50px 0;
+  background-image: url('../images/visual3.jpg'); /* 好きな画像に変更 */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-overlay2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35); /* 少し暗くして背景見やすく */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* フッター */
+.site-footer {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* ---------------------------------------------
+   レスポンシブ対応（タブレット・スマホ向け）
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  .header-container,
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav ul {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .scroll-indicator {
+    font-size: 16px;
+  }
+
+  .scroll-indicator .arrow {
+    font-size: 36px;
+  }
+
+  .swiper-slide {
+    width: 180px;
+    height: 120px;
+  }
+
+  .menu-card img {
+    height: 240px;
+  }
+
+  .menu-card h4 {
+    font-size: 18px;
+  }
+
+  .menu-card p {
+    font-size: 16px;
+  }
+
+  .contact-button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .swiper-slide {
+    width: 140px;
+    height: 100px;
+  }
+
+  .hero-logo img {
+    width: 200px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .site-footer {
+    font-size: 12px;
+  }
+
+  .visual-section,
+  .visual-section2 {
+    height: 300px;
+    background-attachment: scroll; /* モバイルではfixedが効かないのでscroll */
+  }
+
+  .concept-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav ul {
+    gap: 12px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
